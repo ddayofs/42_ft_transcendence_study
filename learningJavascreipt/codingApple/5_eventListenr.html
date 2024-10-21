@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="alert-box" id="alert">
+   <p class="title1">알림창임</p> 
+<button  id="close">닫기</button>
+</div>
+
+<button onclick="showbox1('block')">버튼1</button>
+<button onclick="showbox2('block')">버튼2</button>
+
+<script>
+//id 말고 class를 이용한 selector가 있다 => getElementByClassName
+//id의 경우 중복을 허용하지 않지만 class는 중복해서 여러 태그에 사용가능
+// 그래서 여러개의 클래스중 몇번째를 나타내는지 index를 명시할 수 있다.
+// document.getElementsByClassName('클래스명')[0].innerHTML="내용";
+
+//id와 class 말고도 tagname이나 name으로도 찾을 수 있는 방법이 있는데
+//주로 id와 class를 사용한다
+
+//addEventListener를 이용해서 이벤트 발생시 적용될 기능을 함수로 나타낼 수 있다
+//밑애 onclick없이 addEvetnListener로 click  이벤트를 처리했다.
+
+//addEventListener는 감시하는 역학을 하는데 click, mouseover, scroll 등등 약 20가지의
+//이벤트를 감시해서 이벤트 발생시 콜백함수를 실행해준다.
+//콜백함수를 일단 파라미터 자리에 들어가는 함수라고 생각하면 된다.
+
+// document.getElementById("???").addEventListener("이벤트",function(){
+//       함수 내용
+// });
+
+
+
+//닫기
+    document.getElementById("close").addEventListener("click",function(){
+        document.getElementById("alert").style.display='none';
+    });
+
+
+//아이디를 입력해주세요 알림창
+function showbox1(aa){
+    document.getElementsByClassName('title1')[0].innerHTML="아이디를 입력해주세요";
+    document.getElementById("alert").style.display=aa;
+   
+   
+};
+
+//비밀번호 입력해주세요 알림창
+function showbox2(aa){
+    
+    document.getElementById("alert").style.display=aa;
+   
+        document.getElementById("hi").innerHTML="비밀번호 입력해주세요";
+   
+};
+
+
+
+</script>
+
+</body>
+</html>
+
+출처: https://just-do-it-man.tistory.com/6 [DogFootMan:티스토리]

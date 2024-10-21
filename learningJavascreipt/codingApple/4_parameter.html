@@ -1,0 +1,50 @@
+
+<!-- 4_parameter -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<!-- 
+		$ 표시는 jquery 관련된것 
+	주석처리는 ctrl + /,   command + / 
+
+	UI 만드는 step
+	1) html/css 미리 디자인(미리하면 미리 숨김)
+	2)필요할 때 보여달라고 코드 짬 (자바스크립트로)
+	-->
+	<!-- <button onclick="document.getElementById('alert').style.display='block'">버튼1</button> -->
+	<div class="alert-box" id="alert">
+		<p>알림창</p>
+		<button onclick="closeBox('alert')">닫기</button>
+	</div>
+	<button onclick="showBox('alert')">열기</button>
+
+	<div class = "alert-box" id='숙제1'>
+		<p id="숙제1 title">알림창</p>
+		<button onclick="closeBox('숙제1')">숙제1닫기</button>
+	</div>
+	<button onclick="내용표시('나는 숙제1이다')">숙제1열기</button>
+
+<script>
+    function showBox(id){
+    		// document.getElementsByClass("alert-box").style.display="block";
+		document.getElementById(id).style.display="block";
+    }
+
+	function closeBox(id){
+		document.getElementById(id).style.display='none';	
+	}
+</script>
+
+<script>
+	function 내용표시(내용){
+		document.getElementById('숙제1 title').innerHTML = 내용;
+		document.getElementById('숙제1').style.display = 'block';
+	}
+</script>
+</body>
+</html>

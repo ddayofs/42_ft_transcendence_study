@@ -1,0 +1,42 @@
+<!-- 2_alert, 3_function -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!-- 
+    $ 표시는 jquery 관련된것 
+   주석처리는 ctrl + /,   command + / 
+
+UI 만드는 step
+1) html/css 미리 디자인(미리하면 미리 숨김)
+2)필요할 때 보여달라고 코드 짬 (자바스크립트로)
+-->
+<!-- <button onclick="document.getElementById('alert').style.display='block'">버튼1</button> -->
+<button onclick="showBox()">열기</button>
+<div class="alert-box" id="alert">알림창<button onclick="closeBox()">닫기</button></div>
+
+<script>
+    function showBox(){
+    
+		// document.getElementsByClass("alert-box").style.display="block";
+		document.getElementById("alert").style.display="block";
+    }
+
+	function closeBox(){
+		document.getElementById('alert').style.display='none';	
+	}
+
+
+// 숙제!!!
+//알림창에 닫기 버튼을 만들어서 클릭시 알림창을 숨겨라
+//답
+//<div class="alert-box" id="alert">알림창임<button onclick="document.getElementById('alert').style.display='none'">닫기</button></div>
+
+</script>
+
+</body>
+</html>
