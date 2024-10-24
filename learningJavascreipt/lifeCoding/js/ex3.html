@@ -1,59 +1,109 @@
 <!doctype html>
 <html>
 <head>
-<title>전설의 레전드 클래식인 고전 마스터피스 명작 투명드래곤</title>
+	<title>전설의 레전드 클래식인 고전 마스터피스 명작 <span class = "js">투명드래곤</span></title>
 <meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sunflower&display=swap" rel="stylesheet">
+	<style>
+		* {
+			font-family: 'Sunflower', sans-serif;
+		}
+		h1 {text-align: center;}
+		h2 {text-align: center;}
+		h3 {text-align: center;}
+		h4 {text-align: center;}
+		h5 {text-align: center;}
+		h6 {text-align: center;}
+		ol {
+		text-align: center;}
+		/* li {text-align: center;} */
+		p {text-align: center;}
+		div {text-align: center;}
+		/* span은 부모 요소 없이 가운데 정렬이 불가능 인라인 요소?이기 때문 */
+		span {text-align: center;}
+		
+		/* 클래스 선택자 : js 클래스에 대한 style 지정. 이외에도 태그 선택자, 유니버설 선택자, 아이디 선택자, 결합 선택자 등의 여러 선택자들이 존재한다. */
+		.js {
+			color: powderblue;
+			background-color: rgb(37, 42, 42);
+			font-weight: bold;
+		}
+		#first{
+			color: salmon;
+		}
+	</style>
 </head>
 
 <body>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sunflower&display=swap" rel="stylesheet">
-<style>
-	* {
-		font-family: 'Sunflower', sans-serif;
-	}
-	h1 {text-align: center;}
-	h2 {text-align: center;}
-	h3 {text-align: center;}
-	h4 {text-align: center;}
-	h5 {text-align: center;}
-	h6 {text-align: center;}
-	ol {text-align: center;}
-	/* li {text-align: center;} */
-	p {text-align: center;}
-	div {text-align: center;}
-	/* span은 부모 요소 없이 가운데 정렬이 불가능 인라인 요소?이기 때문 */
-	span {text-align: center;}
-</style>
 <ol>
-	<li><a href = "index.html">투명드래곤 목차</a></li>
-	<li><a href = "invisibleDragon_1.html">투명드래곤 1화</a></li>
-	<li><a href = "invisibleDragon_2.html">투명드래곤 2화</a></li>
+	<!-- 각 id 선택자는 한 페이지에 유일하다.  -->
+	<li><a href = "index.html"><span class = "js" id = "first">투명드래곤</span> 목차</a></li>
+	<li><a href = "invisibleDragon_1.html"><span class = "js">투명드래곤</span> 1화</a></li>
+	<li><a href = "invisibleDragon_2.html"><span class = "js">투명드래곤</span> 2화</a></li>
 </ol>
 
-<h2 style = "color:powderblue;background-color:cadetblue;">투명드래곤 2화</h2>
+<!-- 자바스크립트로 배경색 변경하기 -->
+<!-- 쿼리 셀렉터는 특정 css 선택자를 지정하는 역할을 한다. 아래의 코드에서는 body 태그를 선택해 조작을 하고 있다. -->
+<input type = "button" value = "day" style = "text-align: center;" onclick="
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';"
+>
+<input type = "button" value = "night" style = "text-align: center;" onclick="
+document.querySelector('body').style.backgroundColor = 'black';
+document.querySelector('body').style.color = 'white';"
+>
+
+<input type = "button" id = "toggleButton" value = "toggle night" style = "text-align: center;" onclick="
+// if (document.getElementById('toggleButton').value === 'toggle night') {
+if (document.querySelector('#toggleButton').value === 'toggle night') {
+	document.querySelector('body').style.backgroundColor = 'black';
+	document.querySelector('body').style.color = 'white';
+	document.querySelector('#toggleButton').value = 'toggle day';
+} else {
+	document.querySelector('body').style.backgroundColor = 'white';
+	document.querySelector('body').style.color = 'black';
+	document.querySelector('#toggleButton').value = 'toggle night';
+}"
+>
+
+<input type = "button" value = "button using this keyword" style = "text-align: center;" onclick="
+	var target = document.querySelector('body');
+	if (this.value === 'button using this keyword') {
+		this.value = 'button using this keyword clicked';
+		target.style.backgroundColor = 'black';
+		target.style.color = 'white';
+	} else {
+		this.value = 'button using this keyword';
+		target.style.backgroundColor = 'white';
+		target.style.color = 'black';
+	}
+">
+
+<h2 style = "color:powderblue;background-color:cadetblue;"><span class = "js">투명드래곤</span> 2화</h2>
 <!-- p, div 태그는 블록요소(수평영역 모두 차지)이다. p태그는 자식으로 인라인요소(사이즈 영역만 차지)만을 포함하도록 되어있다. 
 p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 충돌이 일어난다. 
 그 결과로 div태그가 p태그 안에 들어가면 가운데 정렬이 풀리게 된다. -->
 <div style = "font-weight: bold;">1화에 이어서...</div>
 <p>
-	<span style = "font-weight: bold;">1화에 이어서...</span>
-	투명드래곤은 심심햇다<br>
+	1화에 이어서...
+	<span style = "font-weight: bold;"></span>
+	<span class = "js">투명드래곤</span>은 심심햇다<br>
 	그래서 신을죽이기로 햇다<br>
 	<img src="https://image.zeta-ai.io/profile-image/fb49713a-0ad2-4add-9f77-29478dcfbbdf/56ddbc6d-42dc-4471-b52f-031e78e9b003.jpeg?w=750&q=75&f=webp" width="350"><br>
 	그래서 신들은 비상이걸렸따
 </p>
 <p>
-	"씨발 투명드래곤이 쳐들어온대"
+	"씨발 <span class = "js">투명드래곤</span>이 쳐들어온대"
 </p>
 <p>
 	"그래 싸우자"
 </p>
 <p>
-	하지만 투명드래곤은 투명드래곤이라서 투명했따<br>
+	하지만 <span class = "js">투명드래곤</span>은 <span class = "js">투명드래곤</span>이라서 투명했따<br>
 	그래서 안보여서 신들은결국 다 죽고말았따<br>
-	투명드래곤은 이새계가심심해서 다른새계로<br>
+	<span class = "js">투명드래곤</span>은 이새계가심심해서 다른새계로<br>
 	가기로하였따
 </p>
 <p>
