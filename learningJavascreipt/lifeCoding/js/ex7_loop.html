@@ -11,6 +11,14 @@
 		<script>
 			for (var i = 0; i <10; i++)
 				document.write("<li>hohoho </li>" + i);
+			document.write("<br>");
+
+			// newline(\n) 은 html 페이지에서 적용되지 않는다.
+			document.write("new line\nnew line2");
+
+			var fruits = ['apple', 'banana', 'cherry'];
+			for (var i = 0; i < fruits.length; i++)
+				document.write("<li>" + i + " " + fruits[i] + "</li>");
 		</script>
 	</ul>
 </body>
