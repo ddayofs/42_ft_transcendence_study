@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+	<script src = "color.js"></script>
+
 	<title>전설의 레전드 클래식인 고전 마스터피스 명작 <span class = "js">투명드래곤</span></title>
 	<meta charset="utf-8">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,20 +36,19 @@
 			color: salmon;
 		}
 	</style>
-	<script src = "color.js"></script>
 </head>
 
 <body>
-<ol>
-	<!-- 각 id 선택자는 한 페이지에 유일하다.  -->
-	<li><a href = "index.html"><span class = "js" id = "first">투명드래곤</span> 목차</a></li>
-	<li><a href = "invisibleDragon_1.html"><span class = "js">투명드래곤</span> 1화</a></li>
-	<li><a href = "invisibleDragon_2.html"><span class = "js">투명드래곤</span> 2화</a></li>
-</ol>
-
-<!-- 자바스크립트로 배경색 변경하기 -->
-<!-- 쿼리 셀렉터는 특정 css 선택자를 지정하는 역할을 한다. 아래의 코드에서는 body 태그를 선택해 조작을 하고 있다. -->
-<input type = "button" value = "day" style = "text-align: center;" onclick="
+	<ol>
+		<!-- 각 id 선택자는 한 페이지에 유일하다.  -->
+		<li><a href = "index.html"><span class = "js" id = "first">투명드래곤</span> 목차</a></li>
+		<li><a href = "invisibleDragon_1.html"><span class = "js">투명드래곤</span> 1화</a></li>
+		<li><a href = "invisibleDragon_2.html"><span class = "js">투명드래곤</span> 2화</a></li>
+	</ol>
+	
+	<!-- 자바스크립트로 배경색 변경하기 -->
+	<!-- 쿼리 셀렉터는 특정 css 선택자를 지정하는 역할을 한다. 아래의 코드에서는 body 태그를 선택해 조작을 하고 있다. -->
+	<input type = "button" value = "day" style = "text-align: center;" onclick="
 document.querySelector('body').style.backgroundColor = 'white';
 document.querySelector('body').style.color = 'black';"
 >
@@ -72,36 +73,37 @@ if (document.querySelector('#toggleButton').value === 'toggle night') {
 	nightDayHandler(this);
 	// nightDayHandler()는 변수가 없는 함수이다. 이 함수의 this가 button을 가리키지 않기에, 원하는 동작(버튼 클릭 시 배경색 변경)이 이루어지지 않는다.
 	// nightDayHandler();
-">
+	">
 
 <h2 style = "color:powderblue;background-color:cadetblue;"><span class = "js">투명드래곤</span> 2화</h2>
 <!-- p, div 태그는 블록요소(수평영역 모두 차지)이다. p태그는 자식으로 인라인요소(사이즈 영역만 차지)만을 포함하도록 되어있다. 
-p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 충돌이 일어난다. 
-그 결과로 div태그가 p태그 안에 들어가면 가운데 정렬이 풀리게 된다. -->
-<div style = "font-weight: bold;">1화에 이어서...</div>
-<p>
-	1화에 이어서...
-	<span style = "font-weight: bold;"></span>
-	<span class = "js">투명드래곤</span>은 심심햇다<br>
-	그래서 신을죽이기로 햇다<br>
-	<img src="https://image.zeta-ai.io/profile-image/fb49713a-0ad2-4add-9f77-29478dcfbbdf/56ddbc6d-42dc-4471-b52f-031e78e9b003.jpeg?w=750&q=75&f=webp" width="350"><br>
-	그래서 신들은 비상이걸렸따
-</p>
-<p>
-	"씨발 <span class = "js">투명드래곤</span>이 쳐들어온대"
-</p>
-<p>
-	"그래 싸우자"
-</p>
-<p>
-	하지만 <span class = "js">투명드래곤</span>은 <span class = "js">투명드래곤</span>이라서 투명했따<br>
-	그래서 안보여서 신들은결국 다 죽고말았따<br>
-	<span class = "js">투명드래곤</span>은 이새계가심심해서 다른새계로<br>
-	가기로하였따
-</p>
-<p>
-	꼐속
-</p>
+	p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 충돌이 일어난다. 
+	그 결과로 div태그가 p태그 안에 들어가면 가운데 정렬이 풀리게 된다. -->
+	<div style = "font-weight: bold;">1화에 이어서...</div>
+	<p>
+		1화에 이어서...
+		<span style = "font-weight: bold;"></span>
+		<span class = "js">투명드래곤</span>은 심심햇다<br>
+		그래서 신을죽이기로 햇다<br>
+		<img src="https://image.zeta-ai.io/profile-image/fb49713a-0ad2-4add-9f77-29478dcfbbdf/56ddbc6d-42dc-4471-b52f-031e78e9b003.jpeg?w=750&q=75&f=webp" width="350"><br>
+		그래서 신들은 비상이걸렸따
+	</p>
+	<p>
+		"씨발 <span class = "js">투명드래곤</span>이 쳐들어온대"
+	</p>
+	<p>
+		"그래 싸우자"
+	</p>
+	<p>
+		하지만 <span class = "js">투명드래곤</span>은 <span class = "js">투명드래곤</span>이라서 투명했따<br>
+		그래서 안보여서 신들은결국 다 죽고말았따<br>
+		<span class = "js">투명드래곤</span>은 이새계가심심해서 다른새계로<br>
+		가기로하였따
+	</p>
+	<p>
+		꼐속
+	</p>
+<!-- <script src = "color.js"></script> -->
 
 </body>
 </html>

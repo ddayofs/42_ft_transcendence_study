@@ -112,12 +112,14 @@ p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 �
 			self.value = 'button using this keyword clicked';
 			body.setBackgroundColor('black');
 			body.setColor('white');
-			links.setColor(alist, 'white');
+			links.setColor('white');
+			// links.setColor(alist, 'white');
 		} else {
 			self.value = 'button using this keyword';
 			body.setBackgroundColor('white');
 			body.setColor('black');
-			links.setColor(alist, 'black');
+			links.setColor('black');
+			// links.setColor(alist, 'black');
 		}
 	}
 
@@ -154,11 +156,19 @@ p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 �
 	}
 </script>
 <script>
-	var alist = document.querySelectorAll('a');
+	// var links = {
+	// 	setColor : function  (color) {
+	// 		var alist = document.querySelectorAll('a');
+	// 		for (var i = 0; i < alist.length; i++) {
+	// 			alist[i].style.color = color;
+	// 		}
+	// 		// document.querySelectorAll('a')[0].style.color = color;
+	// 	}
+	// }
 	var links = {
-		setColor : function (alist, color) {
-			for (var i = 0; i < alist.length; i++) {
-				alist[i].style.color = color;
+		setColor : function (color) {
+			for (var i = 0; i <  document.querySelectorAll('a').length; i++) {
+				document.querySelectorAll('a')[i].style.color = color;
 			}
 		}
 	}

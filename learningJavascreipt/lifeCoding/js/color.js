@@ -6,48 +6,49 @@ function nightDayHandler(self){
 		self.value = 'button using this keyword clicked';
 		body.setBackgroundColor('black');
 		body.setColor('white');
-		links.setColor(alist, 'white');
+		links.setColor('white');
 	} else {
 		self.value = 'button using this keyword';
 		body.setBackgroundColor('white');
 		body.setColor('black');
-		links.setColor(alist, 'black');
+		links.setColor('black');
 	}
 }
 
-
-var target = document.querySelector('body');
-var body = {
-	setColor: function(color) {
-		target.style.color = color;
-	},
-	setBackgroundColor: function(color) {
-		target.style.backgroundColor = color;
-	}
-}
-
-var alist = document.querySelectorAll('a');
-var links = {
-	setColor : function (alist, color) {
-		for (var i = 0; i < alist.length; i++) {
-			alist[i].style.color = color;
-		}
-	}
-}
-
+// // 1 code. target은 body 
+// var target = document.querySelector('body');
 // var body = {
 // 	setColor: function(color) {
-// 		document.querySelector('body').style.color = color;
+// 		target.style.color = color;
 // 	},
 // 	setBackgroundColor: function(color) {
-// 		document.querySelector('body').style.backgroundColor = color;
+// 		target.style.backgroundColor = color;
 // 	}
 // }
 
+// var alist = document.querySelectorAll('a');
 // var links = {
-// 	setColor : function (color) {
-// 		for (var i = 0; i < document.querySelectorAll('a').length; i++) {
-// 			document.querySelectorAll('a')[i].style.color = color;
+// 	setColor : function (alist, color) {
+// 		for (var i = 0; i < alist.length; i++) {
+// 			alist[i].style.color = color;
 // 		}
 // 	}
 // }
+
+// 2. code
+var body = {
+	setColor: function(color) {
+		document.querySelector('body').style.color = color;
+	},
+	setBackgroundColor: function(color) {
+		document.querySelector('body').style.backgroundColor = color;
+	}
+}
+
+var links = {
+	setColor : function (color) {
+		for (var i = 0; i < document.querySelectorAll('a').length; i++) {
+			document.querySelectorAll('a')[i].style.color = color;
+		}
+	}
+}
