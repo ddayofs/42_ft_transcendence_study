@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>전설의 레전드 클래식인 고전 마스터피스 명작 <span class = "js">투명드래곤</span></title>
-<meta charset="utf-8">
+	<meta charset="utf-8">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sunflower&display=swap" rel="stylesheet">
@@ -34,6 +34,7 @@
 			color: salmon;
 		}
 	</style>
+	<script src = "color.js"></script>
 </head>
 
 <body>
@@ -56,7 +57,6 @@ document.querySelector('body').style.color = 'white';"
 >
 
 <input type = "button" id = "toggleButton" value = "toggle night" style = "text-align: center;" onclick="
-// if (document.getElementById('toggleButton').value === 'toggle night') {
 if (document.querySelector('#toggleButton').value === 'toggle night') {
 	document.querySelector('body').style.backgroundColor = 'black';
 	document.querySelector('body').style.color = 'white';
@@ -69,26 +69,6 @@ if (document.querySelector('#toggleButton').value === 'toggle night') {
 >
 
 <input type = "button" value = "button using this keyword" style = "text-align: center;" onclick="
-	// var target = document.querySelector('body');
-	// var alist = document.querySelectorAll('a');
-	// if (this.value === 'button using this keyword') {
-	// 	this.value = 'button using this keyword clicked';
-	// 	target.style.backgroundColor = 'black';
-	// 	target.style.color = 'white';
-	// 	// querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
-	// 	// document.querySelectorAll('a').color = 'white';
-	// 	// for(var i = 0; i < alist.length; i++) {
-	// 	// 	alist[i].style.color = 'white';
-	// 	// }
-	// } else {
-	// 	this.value = 'button using this keyword';
-	// 	target.style.backgroundColor = 'white';
-	// 	target.style.color = 'black';
-	// 	// document.querySelectorAll('a').color = 'black';
-	// 	for(var i = 0; i < alist.length; i++) {
-	// 		alist[i].style.color = 'black';
-	// 	}
-	// }
 	nightDayHandler(this);
 	// nightDayHandler()는 변수가 없는 함수이다. 이 함수의 this가 button을 가리키지 않기에, 원하는 동작(버튼 클릭 시 배경색 변경)이 이루어지지 않는다.
 	// nightDayHandler();
@@ -122,80 +102,6 @@ p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 �
 <p>
 	꼐속
 </p>
-
-<script>
-	function nightDayHandler(self){
-		var target = document.querySelector('body');
-		var alist = document.querySelectorAll('a');
-		if (self.value === 'button using this keyword') {
-			self.value = 'button using this keyword clicked';
-			// //함수화.
-			// target.style.backgroundColor = 'black';
-			// target.style.color = 'white';
-			bodySetbackgroundColor(target, 'black');
-			bodySetcolor(target, 'white');
-			
-			// // querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
-			// document.querySelectorAll('a').color = 'white';
-			// //setColor로 중복 코드 제거
-			// for(var i = 0; i < alist.length; i++) {
-			// 	alist[i].style.color = 'white';
-			// }
-			linksSetColor(alist, 'white');
-		} else {
-			self.value = 'button using this keyword';
-			// //함수화.
-			// target.style.backgroundColor = 'white';
-			// target.style.color = 'black';
-			bodySetbackgroundColor(target, 'white');
-			bodySetcolor(target, 'black');
-
-			// document.querySelectorAll('a').color = 'black';
-			// for(var i = 0; i < alist.length; i++) {
-			// 	alist[i].style.color = 'black';
-			// }
-			linksSetColor(alist, 'black');
-		}
-	}
-
-	function linksSetColor(alist, color) {
-		for(var i = 0; i < alist.length; i++) {
-				alist[i].style.color = color;
-		}
-	}
-
-	function bodySetcolor(target, color) {
-		target.style.color = color;
-	}
-
-	function bodySetbackgroundColor(target, color) {
-		target.style.backgroundColor = color;
-	}
-
-	// 변수가 없는 함수. 
-	// function nightDayHandler(){
-	// 	var target = document.querySelector('body');
-	// 	var alist = document.querySelectorAll('a');
-	// 	if (this.value === 'button using this keyword') {
-	// 		this.value = 'button using this keyword clicked';
-	// 		target.style.backgroundColor = 'black';
-	// 		target.style.color = 'white';
-	// 		// querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
-	// 		// document.querySelectorAll('a').color = 'white';
-	// 		// for(var i = 0; i < alist.length; i++) {
-	// 		// 	alist[i].style.color = 'white';
-	// 		// }
-	// 	} else {
-	// 		this.value = 'button using this keyword';
-	// 		target.style.backgroundColor = 'white';
-	// 		target.style.color = 'black';
-	// 		// document.querySelectorAll('a').color = 'black';
-	// 		for(var i = 0; i < alist.length; i++) {
-	// 			alist[i].style.color = 'black';
-	// 		}
-	// 	}
-	// }
-</script>
 
 </body>
 </html>

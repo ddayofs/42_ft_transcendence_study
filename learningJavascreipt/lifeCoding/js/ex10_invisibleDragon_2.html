@@ -69,26 +69,6 @@ if (document.querySelector('#toggleButton').value === 'toggle night') {
 >
 
 <input type = "button" value = "button using this keyword" style = "text-align: center;" onclick="
-	// var target = document.querySelector('body');
-	// var alist = document.querySelectorAll('a');
-	// if (this.value === 'button using this keyword') {
-	// 	this.value = 'button using this keyword clicked';
-	// 	target.style.backgroundColor = 'black';
-	// 	target.style.color = 'white';
-	// 	// querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
-	// 	// document.querySelectorAll('a').color = 'white';
-	// 	// for(var i = 0; i < alist.length; i++) {
-	// 	// 	alist[i].style.color = 'white';
-	// 	// }
-	// } else {
-	// 	this.value = 'button using this keyword';
-	// 	target.style.backgroundColor = 'white';
-	// 	target.style.color = 'black';
-	// 	// document.querySelectorAll('a').color = 'black';
-	// 	for(var i = 0; i < alist.length; i++) {
-	// 		alist[i].style.color = 'black';
-	// 	}
-	// }
 	nightDayHandler(this);
 	// nightDayHandler()는 변수가 없는 함수이다. 이 함수의 this가 button을 가리키지 않기에, 원하는 동작(버튼 클릭 시 배경색 변경)이 이루어지지 않는다.
 	// nightDayHandler();
@@ -125,76 +105,63 @@ p태그 안에 div가 들어가면 브라우저가 해석을 잘 하지 못해 �
 
 <script>
 	function nightDayHandler(self){
-		var target = document.querySelector('body');
-		var alist = document.querySelectorAll('a');
+		// var target = document.querySelector('body');
+		// // querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
+		// var alist = document.querySelectorAll('a');
 		if (self.value === 'button using this keyword') {
 			self.value = 'button using this keyword clicked';
-			// //함수화.
-			// target.style.backgroundColor = 'black';
-			// target.style.color = 'white';
-			bodySetbackgroundColor(target, 'black');
-			bodySetcolor(target, 'white');
-			
-			// // querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
-			// document.querySelectorAll('a').color = 'white';
-			// //setColor로 중복 코드 제거
-			// for(var i = 0; i < alist.length; i++) {
-			// 	alist[i].style.color = 'white';
-			// }
-			linksSetColor(alist, 'white');
+			body.setBackgroundColor('black');
+			body.setColor('white');
+			links.setColor(alist, 'white');
 		} else {
 			self.value = 'button using this keyword';
-			// //함수화.
-			// target.style.backgroundColor = 'white';
-			// target.style.color = 'black';
-			bodySetbackgroundColor(target, 'white');
-			bodySetcolor(target, 'black');
-
-			// document.querySelectorAll('a').color = 'black';
-			// for(var i = 0; i < alist.length; i++) {
-			// 	alist[i].style.color = 'black';
-			// }
-			linksSetColor(alist, 'black');
+			body.setBackgroundColor('white');
+			body.setColor('black');
+			links.setColor(alist, 'black');
 		}
 	}
 
-	function linksSetColor(alist, color) {
-		for(var i = 0; i < alist.length; i++) {
-				alist[i].style.color = color;
-		}
-	}
-
-	function bodySetcolor(target, color) {
-		target.style.color = color;
-	}
-
-	function bodySetbackgroundColor(target, color) {
-		target.style.backgroundColor = color;
-	}
-
-	// 변수가 없는 함수. 
-	// function nightDayHandler(){
-	// 	var target = document.querySelector('body');
-	// 	var alist = document.querySelectorAll('a');
-	// 	if (this.value === 'button using this keyword') {
-	// 		this.value = 'button using this keyword clicked';
-	// 		target.style.backgroundColor = 'black';
-	// 		target.style.color = 'white';
-	// 		// querySelectorAll은 노드 리스트를 반환한다. querySelctor는 노드를 반환한다. 이 노드는 객체 변수이다. 이 노드 안에는 프로퍼티들이 존재한다.
-	// 		// document.querySelectorAll('a').color = 'white';
-	// 		// for(var i = 0; i < alist.length; i++) {
-	// 		// 	alist[i].style.color = 'white';
-	// 		// }
-	// 	} else {
-	// 		this.value = 'button using this keyword';
-	// 		target.style.backgroundColor = 'white';
-	// 		target.style.color = 'black';
-	// 		// document.querySelectorAll('a').color = 'black';
-	// 		for(var i = 0; i < alist.length; i++) {
-	// 			alist[i].style.color = 'black';
-	// 		}
+	// function linksSetColor(alist, color) {
+	// 	for(var i = 0; i < alist.length; i++) {
+	// 			alist[i].style.color = color;
 	// 	}
 	// }
+	// // //다음과 같은 함수 정의도 가능하다.
+	// // var linksSetColor = function(alist, color) {
+	// // 	for(var i = 0; i < alist.length; i++) {
+	// // 			alist[i].style.color = color;
+	// // 	}
+	// // }
+
+
+	// function bodySetcolor(target, color) {
+	// 	target.style.color = color;
+	// }
+
+	// function bodySetbackgroundColor(target, color) {
+	// 	target.style.backgroundColor = color;
+	// }
+</script>
+<script>
+	var target = document.querySelector('body');
+	var body = {
+		setColor: function(color) {
+			target.style.color = color;
+		},
+		setBackgroundColor: function(color) {
+			target.style.backgroundColor = color;
+		}
+	}
+</script>
+<script>
+	var alist = document.querySelectorAll('a');
+	var links = {
+		setColor : function (alist, color) {
+			for (var i = 0; i < alist.length; i++) {
+				alist[i].style.color = color;
+			}
+		}
+	}
 </script>
 
 </body>
