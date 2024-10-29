@@ -38,17 +38,20 @@ function nightDayHandler(self){
 // 2. code
 var body = {
 	setColor: function(color) {
-		document.querySelector('body').style.color = color;
+		// document.querySelector('body').style.color = color;
+		$('body').css('color', color);
 	},
 	setBackgroundColor: function(color) {
-		document.querySelector('body').style.backgroundColor = color;
+		// document.querySelector('body').style.backgroundColor = color;
+		$('body').css('backgroundColor', color);
 	}
 }
 
 var links = {
 	setColor : function (color) {
-		for (var i = 0; i < document.querySelectorAll('a').length; i++) {
-			document.querySelectorAll('a')[i].style.color = color;
-		}
+		// for (var i = 0; i < document.querySelectorAll('a').length; i++) {
+		// 	document.querySelectorAll('a')[i].style.color = color;
+		// }
+		$('a').css('color', color);
 	}
 }
